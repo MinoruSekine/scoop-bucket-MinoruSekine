@@ -1,0 +1,31 @@
+{
+    "version": "3.1.18",
+    "description": "KensingtonWorks",
+    "homepage": "https://www.kensington.com/ja-jp/software/kensingtonworks/",
+    "license": "Proprietary",
+    "architecture": {
+        "32bit": {
+            "url": "https://www.kensington.com/siteassets/software-support/kensingtonworks/2024-update/kensingtonworks_3.1.18_1732754957.msi#setup.msi_",
+            "hash": "sha256:931f5696270caab1ae5615c1f76991a7f691491def4b2a48f82bb253570de9b7"
+        },
+        "64bit": {
+            "url": "https://www.kensington.com/siteassets/software-support/kensingtonworks/2024-update/kensingtonworks_3.1.18_1732754957.msi#setup.msi_",
+            "hash": "sha256:931f5696270caab1ae5615c1f76991a7f691491def4b2a48f82bb253570de9b7"
+        }
+    },
+    "installer": {
+        "script": "Start-Process -FilePath 'msiexec.exe' -ArgumentList @('/i', \"$dir\\setup.msi_\", '/qn') -WindowStyle Hidden -Wait"
+    },
+    "uninstaller": {
+        "script": "Start-Process -FilePath 'msiexec.exe' -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn') -WindowStyle Hidden -Wait"
+    },
+    "checkver": {
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+        "url": "https://www.kensington.com/ja-jp/software/kensingtonworks/",
+        "regex": "2024-update/kensingtonworks_(?<version>[0-9.]+)_(?<build>[0-9]+)\\.msi",
+        "replace": "${version}"
+    },
+    "autoupdate": {
+        "url": "https://www.kensington.com/siteassets/software-support/kensingtonworks/2024-update/kensingtonworks_$matchVersion_$matchBuild.msi"
+    }
+}
