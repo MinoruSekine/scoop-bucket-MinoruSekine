@@ -1,13 +1,13 @@
 {
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Invoke toast notification by command-line.",
     "homepage": "https://github.com/MinoruSekine/win-toast-cli",
     "license": {
         "identifier": "AGPL-3.0-or-later",
         "url": "https://www.gnu.org/licenses/agpl-3.0.html"
     },
-    "url": "https://github.com/MinoruSekine/win-toast-cli/releases/download/v0.0.2/win-toast-cli-v0.0.2.zip",
-    "hash": "sha256:270a8122453b4eb539f4644f0c1c2bb66847eaac5c3c9fcbc39b6cf1db2b0892",
+    "url": "https://github.com/MinoruSekine/win-toast-cli/releases/download/v0.0.4/win-toast-cli-v0.0.4.zip",
+    "hash": "269ff1190cd20f3c91a734e13df741c0e6331113719ffad5a3c535d565d5ac9d",
     "bin": [
         "toast-cli.ps1",
         "tools/toast-scoop-status.ps1"
